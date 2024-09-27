@@ -1,4 +1,5 @@
 
+import 'package:color_generator/color_picker.dart';
 import 'package:color_generator/controllers/color_controller.dart';
 import 'package:color_generator/screens/color_generator.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,10 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(onPressed: () {
               ColorController.instance.pickImage(ImageSource.gallery).then((value) => Get.to(()=> ColorGenerator()),);
             }, child: Text("Get Galary Image")),
+            const SizedBox(height: 20,),
+            ElevatedButton(onPressed: () {
+              ColorController.instance.pickImage(ImageSource.gallery).then((value) => Get.to(()=> CameraColorPicker()),);
+            }, child: Text("Get Color from tapped area")),
           ],
         ),
       ),

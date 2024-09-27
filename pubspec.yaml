@@ -38,6 +38,7 @@ dependencies:
   palette_generator: ^0.3.0
   get:
   image_picker:
+  image: ^4.0.14
 
 dev_dependencies:
   flutter_test:
